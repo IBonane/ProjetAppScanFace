@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="background.png"
+             x:Class="DLFaceScan.ScannerPage">
+    <ContentPage.Content>
+        
+        <StackLayout VerticalOptions="Center">
+            
+            <Image x:Name="faceImage" 
+                   Aspect="AspectFill"
+                   WidthRequest="200" 
+                   HeightRequest="350"
+                   BackgroundColor="Gray"/>
+
+            <Button Text="Cliquez ici pour continuer" 
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                Clicked="ContinueButtonClicked"
+                TextColor="White"/>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
