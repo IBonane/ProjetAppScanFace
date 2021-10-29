@@ -10,7 +10,7 @@ namespace DLFaceScan.service
 {
     class CognitiveService
     {
-        private static readonly string API_KEY_1 = "b8fa427bf7ad4284a61b20275d29dbf8";
+        private static readonly string API_KEY_1 = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
  
         private static readonly string ENDPOINT_URL = "https://faceapidjimba.cognitiveservices.azure.com" + "/face/v1.0/";
 
