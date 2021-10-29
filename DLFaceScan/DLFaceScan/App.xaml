@@ -3,6 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DLFaceScan.App">
     <Application.Resources>
+        
+        <ResourceDictionary>
+            
+            <OnPlatform x:TypeArguments="x:String" x:Key="Minercraftory">
+                <On Platform="Android" Value="Minercraftory.ttf#Minercraftory" />
+                <On Platform="iOS" Value="Minercraftory" />
+            </OnPlatform>
+
+            <Style x:Key="PixelLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource Minercraftory}" />
+            </Style>
+            
+        </ResourceDictionary>
 
     </Application.Resources>
 </Application>

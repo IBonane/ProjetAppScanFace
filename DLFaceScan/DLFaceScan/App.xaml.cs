@@ -11,6 +11,7 @@ namespace DLFaceScan
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new ScannerPage(null));
         }
 
         protected override void OnStart()

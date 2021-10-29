@@ -5,15 +5,64 @@
              x:Class="DLFaceScan.ScannerPage">
     <ContentPage.Content>
         
-        <StackLayout VerticalOptions="Center">
-            
-            <Image x:Name="faceImage" 
-                   Aspect="AspectFill"
-                   WidthRequest="200" 
-                   HeightRequest="350"
-                   BackgroundColor="Gray"/>
+        <StackLayout VerticalOptions="Center" Margin="20,0">
 
-            <Button Text="Cliquez ici pour continuer" 
+            <Grid HeightRequest="400">
+                <Image 
+                    Source="cadre.png"
+                    Aspect="Fill"/>
+
+                <Image x:Name="faceImage" 
+                       Aspect="AspectFill"
+                       Margin="20"
+                       BackgroundColor="Gray"/>
+
+                <Image x:Name="laserAnimation"
+                       Source="laser.png"
+                       VerticalOptions="Start"
+                       Margin="0,-10,0,0"/>
+
+                <StackLayout x:Name="infoLayout"
+                             IsVisible="False"
+                             Orientation="Horizontal"
+                             VerticalOptions="End" 
+                             HeightRequest="88"
+                             Margin="20,0,20,20"
+                             Padding="10,0"
+                             BackgroundColor="#90000000">
+
+                    <Label x:Name="genderLabel" Text="X"
+                         FontSize="50"
+                         Style="{StaticResource PixelLabel}"
+                         TextColor="White" 
+                         HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="AGE"
+                         FontSize="25"
+                         Style="{StaticResource PixelLabel}"
+                         TextColor="White" 
+                         VerticalOptions="End"
+                         Margin="0,0,10,17"/>
+
+                    <Label x:Name="ageLabel" Text="XX"
+                         FontSize="40"
+                         Style="{StaticResource PixelLabel}"
+                         TextColor="White" 
+                         VerticalTextAlignment="Center"/>
+
+                </StackLayout>
+
+            </Grid>
+
+            <Label x:Name="statusLabel" 
+                   Text="Analyse en cours..." 
+                   TextColor="White" 
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0"/>
+
+            <Button Text="Cliquez ici pour continuer"
+                    x:Name="continueButton"
+                    Opacity="0" 
                 BackgroundColor="Transparent"
                 HorizontalOptions="Center"
                 Clicked="ContinueButtonClicked"

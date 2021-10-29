@@ -1,13 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              BackgroundImageSource="background.png"
              x:Class="DLFaceScan.MainPage">
 
     <StackLayout VerticalOptions="Center">
-        
+
+        <forms:AnimationView
+                x:Name="animationView"
+                Animation="face-scan.json"
+                AnimationSource="AssetOrBundle"
+                Command="{Binding AnimationClikedCommand}"
+                RepeatCount="20"
+                RepeatMode="Restart"
+                WidthRequest="200"
+                HeightRequest="200"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
         <Button Text="Appuyez ici pour commencer" 
                 BackgroundColor="Transparent"
+                FontSize="20"
                 HorizontalOptions="Center"
                 Clicked="StartButtonClicked"
                 TextColor="White"/>
